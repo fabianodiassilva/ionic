@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Titulo da Página
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full color="dark" round (click)='mudarpagina()'>Chamar Página 2</button>
+  <br>
+
+  <table border="1">
+  <tr>
+    <th>conteudo da coluna1 linha 1</th>
+    <td>conteudo da coluna2 linha 1</td>
+  </tr>  
+
+  </table>
+
+  <ion-card>
+      <img src="assets/imgs/visao.png"/>
+      <ion-card-content>
+        <ion-card-title>
+          Título do card
+          </ion-card-title>
+        <p>
+          Inserir aqui o conteúdo do card.
+        </p>
+      </ion-card-content>
+  </ion-card>
+
+
+
+      <ion-card class="ion-card_">
+        <img src="assets/imgs/missao.png"/>
+        <div class="card-title_">Missão</div>
+        <div class="card-subtitle_">Conteúdo da Missão</div>
+      </ion-card>
+
+      <ion-list>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/visao.png">
+            </ion-avatar>
+            <h2>Finn</h2>
+            <h3>Don't Know What To Do!</h3>
+            <p>I've had a pretty messed up day. If we just...</p>
+          </ion-item>
+        </ion-list>      
+
+         <!-- Começou aqui a aula 14/04/18 -->
+        <h1 *ngIf="checkVar === 'UNIPAM'">teste</h1>
+
+        <ul> 
+          <li *ngFor="let _carro of carros">
+            {{ _carro.carro }}
+          </li>
+        </ul> 
+
+        <button ion-button full color="dark" round (click)='irpag3()'>Trocar Cor Botão</button>
+
+</ion-content>
+
+<ion-footer>
+  <p style="text-align: center">Conteúdo do Rodapé</p>
+</ion-footer>
